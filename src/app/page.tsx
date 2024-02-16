@@ -3,7 +3,7 @@ import imgFigbruary from "@/assets/img/figbruary.svg";
 import Image from "next/image";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
-import {data} from "@/data"
+import {data} from "@/app/prompts/page"
 
 
 export default function Home() {
