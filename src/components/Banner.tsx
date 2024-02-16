@@ -30,7 +30,7 @@ const Banner = ({ day, title, text, credit, fullday, tags }: BannerProps) => {
         <p className="text-[1.39rem] leading-[1.95rem]">
           {text}
         </p>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <p className="text-[1.2rem]">
             Credit:{" "}
             <span className="text-[1.34rem] font-semibold">{credit}</span>
