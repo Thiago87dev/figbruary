@@ -21,7 +21,7 @@ const Navbar = () => {
       <ul className="w-[23.27rem] flex justify-end gap-8 text-[1.38rem] font-semibold">
         <Link href="/"><li className="cursor-pointer">home</li></Link>
         <Link href="/prompts"><li className="cursor-pointer">prompts</li></Link>
-        <li className="cursor-pointer">FAQs</li>
+        <Link href="/faqs"><li className="cursor-pointer">FAQs</li></Link>
         <li className="cursor-pointer">2023</li>
       </ul>
     </div>
