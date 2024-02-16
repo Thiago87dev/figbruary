@@ -5,8 +5,13 @@ import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import {data} from "@/data"
 
+interface BannerDetailsProps {
+    params: {id: string}
+}
 
-export default function Home() {
+
+export default function BannerDetails({params}: BannerDetailsProps) {
+    const numberBanner = Number(params.id) - 1
   return (
     <div className="w-full bg-[#b3c9d7] flex flex-col items-center">
       <Navbar />
@@ -22,12 +27,12 @@ export default function Home() {
           #Figbruary2024
         </h3>
         <Banner
-          day={data[0].day}
-          title={data[0].title}
-          text={data[0].text}
-          credit={data[0].credit}
-          fullday={data[0].fullday}
-          tags={data[0].tags}
+          day={params.id}
+          title={data[numberBanner].title}
+          text={data[numberBanner].text}
+          credit={data[numberBanner].credit}
+          fullday={data[numberBanner].fullday}
+          tags={data[numberBanner].tags}
         />
         <div className=" w-[31.25rem] h-[42.39rem] mt-10">
           <p className="text-[1.18rem]">
