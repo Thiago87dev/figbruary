@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import {Syne} from 'next/font/google'
-
-export const syne = Syne({subsets: ['latin']})
+import { Syne } from "next/font/google";
+export const syne = Syne({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.className} flex flex-col justify-between items-center`}>
+      <body
+        className={`${syne.className} flex flex-col justify-between items-center`}
+      >
         {children}
       </body>
     </html>
