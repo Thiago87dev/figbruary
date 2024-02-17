@@ -64,7 +64,7 @@ export const data = [
     title: "Landscape",
     text: "Create a cool landscape illustrarion, city, skyscraper, night, sky, forest etc. ",
     credit: "@realvjy",
-    fullday: "second",
+    fullday: "first",
     tags: tags.filter((tag) => tag.name === 'Illustration' || tag.name === 'Anything' ),
   },
   {
@@ -72,7 +72,7 @@ export const data = [
     title: "Expand Menu",
     text: "A menu for your dashboard or app. Create something cool.",
     credit: "@miggi",
-    fullday: "first",
+    fullday: "second",
     tags: tags.filter((tag) => tag.name === 'Prototype' || tag.name === 'UI' ),
   },
   {
