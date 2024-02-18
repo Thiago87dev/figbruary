@@ -34,7 +34,7 @@ const Navbar = () => {
       ) : (
         <div className="flex justify-around items-center w-full">
           <div className=" w-[12.98rem] h-[3.81rem] flex items-start mt-8 ">
-            <div className=" w-[9.17rem] h-[2.75rem] flex border-[0.13rem] border-solid border-black rounded-[100px] bg-[#F9DF2B] items-center text-[1.3rem] font-normal text-left">
+          <Link href="/"><div className=" w-[9.17rem] h-[2.75rem] flex border-[0.13rem] border-solid border-black rounded-[100px] bg-[#F9DF2B] items-center text-[1.3rem] font-normal text-left">
               <Image
                 priority
                 className="w-[3.81rem] -ml-8"
@@ -42,7 +42,7 @@ const Navbar = () => {
                 alt="figma logo"
               />
               #figbruary
-            </div>
+            </div></Link>
           </div>
           <div className="md:hidden" onClick={toggleMenu}>
             <FiMenu className="text-2xl cursor-pointer" />
