@@ -15,7 +15,7 @@ interface BannerProps {
 
 const Banner = ({ day, title, text, credit, fullday, tags }: BannerProps) => {
   return (
-    <div className="w-[15rem] h-[22rem] md:w-[43.75rem] md:h-[11.27rem] bg-[#F4C94A] flex-col md:flex-row flex justify-around items-center rounded-3xl border-solid border-2 border-black">
+    <div className="w-[15rem] h-[22rem] md:w-[43.75rem] md:h-[11.27rem] bg-[#F4C94A] flex-col md:flex-row flex justify-around items-center rounded-3xl border-solid border-2 border-black p-2">
       <div className="w-[6.88rem] h-[8.14rem] flex flex-col items-center justify-center ">
         <div className="w-[6.75rem] h-[1.7rem] bg-[#A1D99E] rounded-tl-[0.69rem] rounded-tr-[0.69rem] flex justify-center items-center">
           <p className="text-[1.02rem] font-bold">{fullday}</p>
