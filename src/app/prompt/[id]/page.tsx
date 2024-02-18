@@ -13,17 +13,17 @@ interface BannerDetailsProps {
 export default function BannerDetails({params}: BannerDetailsProps) {
     const numberBanner = Number(params.id) - 1
   return (
-    <div className="w-full bg-[#b3c9d7] flex flex-col items-center">
+    <div className="w-full bg-[#b3c9d7] flex flex-col items-center p-2">
       <Navbar />
-      <div className=" w-[56.25rem] h-[88.35rem] z-10 flex flex-col items-center mt-28">
+      <div className=" w-full md:h-[88.35rem] z-10 flex flex-col items-center mt-28 ">
         <Image
-          className=" w-[56.25rem] h-[9.09rem]"
+          className=" w-[35rem] md:w-[56.25rem] md:h-[9.09rem]"
           src={imgFigbruary}
           alt="figbruary"
         />
         <h2 className="text-[2.78rem] mt-3">Challenges using Figma for</h2>
         <h2 className="text-[2.78rem] -mt-4">the next 29 days</h2>
-        <h3 className="text-[1.63rem] font-semibold tracking-[0.31rem] mb-12">
+        <h3 className="text-[1.63rem] font-semibold md:tracking-[0.31rem] mb-12 ">
           #Figbruary2024
         </h3>
         <Banner
@@ -34,7 +34,7 @@ export default function BannerDetails({params}: BannerDetailsProps) {
           fullday={data[numberBanner].fullday}
           tags={data[numberBanner].tags}
         />
-        <div className=" w-[31.25rem] h-[42.39rem] mt-10">
+        <div className=" md:w-[31.25rem] md:h-[42.39rem] mt-10 ">
           <p className="text-[1.18rem]">
             Figbruary is a fictional month created by combining Figma + February
             where you can experiment and design things daily to push the limits.
@@ -66,7 +66,7 @@ export default function BannerDetails({params}: BannerDetailsProps) {
           <h3 className="text-[1.46rem] font-semibold mt-12">
             🔗 All submissions
           </h3>
-          <p className="text-[1.18rem]">
+          <p className="text-[1.18rem] mb-12 md:mb-0">
             all the submissions will available soon
           </p>
         </div>

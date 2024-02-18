@@ -3,15 +3,15 @@ import Navbar from "@/components/Navbar";
 
 const Faqs = () => {
   return (
-    <div className="w-full bg-[#f4c94a] flex flex-col items-center">
+    <div className="md:w-full bg-[#f4c94a] flex flex-col items-center p-2">
       <Navbar />
-      <div className=" w-[56.25rem] h-[65.55rem] flex flex-col items-center mt-28">
-        <div className="w-[56.25rem]  flex flex-col items-center justify-center">
-          <h1 className="text-[4.89rem] font-extrabold leading-[3.6rem]">
+      <div className=" md:w-[56.25rem] md:h-[65.55rem] flex flex-col items-center mt-28">
+        <div className="md:w-[56.25rem]  flex flex-col items-center justify-center">
+          <h1 className="md:text-[4.89rem] text-[3.69rem] font-extrabold leading-[3.6rem]">
             FAQs
           </h1>
         </div>
-        <div className="w-[31.25rem] h-[29.66rem] flex flex-col mt-20">
+        <div className="md:w-[31.25rem] h-[29.66rem] flex flex-col mt-20 mb-32">
           <h3 className="text-[1.58rem] font-semibold leading-[1.95rem] ">
             What is Figbruary?
           </h3>
