@@ -16,8 +16,8 @@ export default function Home() {
           src={imgFigbruary}
           alt="figbruary"
         />
-        <h2 className="text-[2.78rem] mt-3">Challenges using Figma for</h2>
-        <h2 className="text-[2.78rem] -mt-4">the next 29 days</h2>
+        <h2 className="text-[2.78rem] mt-3 text-center">Challenges using Figma for</h2>
+        <h2 className="text-[2.78rem] -mt-4 text-center">the next 29 days</h2>
         <h3 className="text-[1.63rem] font-semibold md:tracking-[0.31rem] mb-12 ">
           #Figbruary2024
         </h3>
