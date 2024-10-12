@@ -4,9 +4,11 @@ import figmaLogo from "@/assets/img/figmaLogo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathName = usePathname()
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -17,15 +19,15 @@ const Navbar = () => {
         <div className="flex justify-center flex-col items-center w-full">
           <ul className="md:hidden gap-8 text-[1.38rem] font-semibold flex flex-col items-center">
             <Link href="/">
-              <li className="cursor-pointer">home</li>
+              <li className={`cursor-pointer ${pathName === '/' && "text-red-500"}`}>home</li>
             </Link>
             <Link href="/prompts">
-              <li className="cursor-pointer">prompts</li>
+              <li className={`cursor-pointer ${pathName.startsWith('/prompts') && "text-red-500"}`}>prompts</li>
             </Link>
             <Link href="/faqs">
-              <li className="cursor-pointer">FAQs</li>
+              <li className={`cursor-pointer ${pathName === '/faqs' && "text-red-500"}`}>FAQs</li>
             </Link>
-            <li className="cursor-pointer">2023</li>
+            <li>2023</li>
           </ul>
           <div className="md:hidden mt-4" onClick={toggleMenu}>
             <FiX className="text-3xl cursor-pointer" />
@@ -49,15 +51,15 @@ const Navbar = () => {
           </div>
           <ul className="hidden w-[23.27rem] md:flex justify-center items-center gap-8 text-[1.38rem] font-semibold">
             <Link href="/">
-              <li className="cursor-pointer">home</li>
+              <li className={`cursor-pointer ${pathName === '/' && "text-red-500"}`}>home</li>
             </Link>
             <Link href="/prompts">
-              <li className="cursor-pointer">prompts</li>
+              <li className={`cursor-pointer ${pathName.startsWith('/prompt') && "text-red-500"}`}>prompts</li>
             </Link>
             <Link href="/faqs">
-              <li className="cursor-pointer">FAQs</li>
+              <li className={`cursor-pointer ${pathName === '/faqs' && "text-red-500"}`}>FAQs</li>
             </Link>
-            <li className="cursor-pointer">2023</li>
+            <li>2023</li>
           </ul>
         </div>
       )}

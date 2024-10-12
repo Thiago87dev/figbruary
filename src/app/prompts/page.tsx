@@ -65,7 +65,9 @@ export const data = [
     text: "Create a cool landscape illustrarion, city, skyscraper, night, sky, forest etc. ",
     credit: "@realvjy",
     fullday: "first",
-    tags: tags.filter((tag) => tag.name === 'Illustration' || tag.name === 'Anything' ),
+    tags: tags.filter(
+      (tag) => tag.name === "Illustration" || tag.name === "Anything"
+    ),
   },
   {
     day: "2",
@@ -73,7 +75,7 @@ export const data = [
     text: "A menu for your dashboard or app. Create something cool.",
     credit: "@miggi",
     fullday: "second",
-    tags: tags.filter((tag) => tag.name === 'Prototype' || tag.name === 'UI' ),
+    tags: tags.filter((tag) => tag.name === "Prototype" || tag.name === "UI"),
   },
   {
     day: "3",
@@ -81,7 +83,7 @@ export const data = [
     text: "You have only frames to create something creative.",
     credit: "@rogie",
     fullday: "third ",
-    tags: tags.filter((tag) => tag.name === 'Anything' ),
+    tags: tags.filter((tag) => tag.name === "Anything"),
   },
   {
     day: "4",
@@ -89,7 +91,9 @@ export const data = [
     text: "Create a widget for app or website.",
     credit: "@Olonk",
     fullday: "fourth ",
-    tags: tags.filter((tag) => tag.name === 'Prototype' || tag.name === 'Variable' ),
+    tags: tags.filter(
+      (tag) => tag.name === "Prototype" || tag.name === "Variable"
+    ),
   },
   {
     day: "5",
@@ -97,7 +101,7 @@ export const data = [
     text: "A watch UI animation showing grattitude.",
     credit: "@miggi",
     fullday: "fifth  ",
-    tags: tags.filter((tag) => tag.name === 'UI' ||tag.name === 'Animation' ),
+    tags: tags.filter((tag) => tag.name === "UI" || tag.name === "Animation"),
   },
   {
     day: "6",
@@ -105,7 +109,7 @@ export const data = [
     text: "Use a plugin to create something cool.",
     credit: "@realvjy",
     fullday: "sixth  ",
-    tags: tags.filter((tag) => tag.name === 'Anything' ),
+    tags: tags.filter((tag) => tag.name === "Anything"),
   },
   {
     day: "7",
@@ -113,7 +117,7 @@ export const data = [
     text: "Create a visually engaging interaction to creatively represent speech or talking.",
     credit: "@Olonk",
     fullday: "seventh",
-    tags: tags.filter((tag) => tag.name === 'Prototype' || tag.name === 'UI' ),
+    tags: tags.filter((tag) => tag.name === "Prototype" || tag.name === "UI"),
   },
   {
     day: "8",
@@ -121,7 +125,7 @@ export const data = [
     text: "Create a widget for app or website.",
     credit: "@realvjy",
     fullday: "eighth ",
-    tags: tags.filter((tag) => tag.name === 'UI'),
+    tags: tags.filter((tag) => tag.name === "UI"),
   },
   {
     day: "9",
@@ -129,7 +133,7 @@ export const data = [
     text: "A responsive ui card for plant care instructions.",
     credit: "@Miggi",
     fullday: "ninth",
-    tags: tags.filter((tag) => tag.name === 'UI' ),
+    tags: tags.filter((tag) => tag.name === "UI"),
   },
   {
     day: "10",
@@ -137,13 +141,13 @@ export const data = [
     text: "Make an animated line chart.",
     credit: "@Eugene",
     fullday: "tenth  ",
-    tags: tags.filter((tag) => tag.name === 'UI' || tag.name === 'Animation' ),
+    tags: tags.filter((tag) => tag.name === "UI" || tag.name === "Animation"),
   },
 ];
 
 const page = () => {
   return (
-    <div className="md:w-full bg-[#bfbce3] flex flex-col items-center ">
+    <div className="md:w-full bg-[#bfbce3] flex flex-col items-center p-2">
       <Navbar />
       <div className=" md:w-[56.25rem] md:h-[94.72rem] flex flex-col items-center mt-28 ">
         <div className="md:w-[56.25rem]  flex flex-col items-center justify-center ">
@@ -156,16 +160,20 @@ const page = () => {
         </div>
         <div className="md:W-[56.25rem] H-[73.75rem] flex flex-wrap gap-5 mt-20 justify-center md:justify-start">
           {data.map((item) => (
-            <Link href={`/prompt/${item.day}`} key={item.day}><WhiteBanner
-              day={item.day}
-              credit={item.credit}
-              tags={item.tags}
-              text={item.text}
-              title={item.title}
-            /></Link>
+            <Link href={`/prompt/${item.day}`} key={item.day}>
+              <WhiteBanner
+                day={item.day}
+                credit={item.credit}
+                tags={item.tags}
+                text={item.text}
+                title={item.title}
+              />
+            </Link>
           ))}
         </div>
-        <p className="text-[1.09rem] leading-[1.8rem] mt-4">✦ ✦ more soon.. ✦ ✦</p>
+        <p className="text-[1.09rem] leading-[1.8rem] mt-4">
+          ✦ ✦ more soon.. ✦ ✦
+        </p>
       </div>
       <Footer />
     </div>
